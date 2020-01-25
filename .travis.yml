@@ -3,4 +3,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t stephengrider/DockerUdemy -f Dockerfile.dev .
+  - docker build -t kimi/docker-react -f Dockerfile.dev .
+
+# script:
+#   - docker run kimi/docker-react npm run test -- --coverage
+
+script:
+  - docker run -e CI=true kimi/docker-react npm run test
