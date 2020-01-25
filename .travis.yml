@@ -10,3 +10,17 @@ before_install:
 
 script:
   - docker run -e CI=true kimi/docker-react yarn test
+
+# deploy to aws
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-northeast-1"
+  app: "AWSEBDocker"
+  env: "Docker-env"
+  bucket_name: "S3 bucket name"
+  bucket_path: "AWSEBDocker"
+  on:
+    branch: master
+  # at travis setting
+  access_key_id: $AWS_ACCESS_KEY 
+  secret_access_key: $AWS_SECRET_KEY
