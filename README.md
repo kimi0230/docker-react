@@ -1,9 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-
-## Create Project
-### npm install -g create-react-app
-### create-react-app [Project Name]
+### Create Project
+    npm install -g create-react-app
+    create-react-app [Project Name]
 
 ## Available Scripts
 
@@ -73,14 +72,14 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 
-##  docker build
-docker build -f Dockerfile.dev .
+##  Docker build
+    docker build -f Dockerfile.dev .
 
-## docker run
-docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <image_id>
+## Docker run
+    docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <image_id>
 
-## start docker file by compose
-docker-compose up
+## Start docker file by compose
+    docker-compose up
 
-## start docker file by compose witj build
-docker-compose up --build# docker-react
+## Start docker file by compose with build
+    docker-compose up --build docker-react
